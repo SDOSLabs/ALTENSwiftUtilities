@@ -105,7 +105,7 @@ switch state {
   case .loaded(let number):
       //Hacer algo cuando el estado es `.loaded(T)`
   case .error(let error):
-  //Hacer algo cuando el estado es `.error(E)`
+      //Hacer algo cuando el estado es `.error(E)`
 }
 ```
 
