@@ -88,7 +88,7 @@ if (state1 == state2) { } //Devolverá `true`
 ```
 
 ``` swift
-let state: ModelDataState<Int, Error> = .loaded([1, 2, 3, 4, 5, 6])
+let state: ModelDataState<[Int], Error> = .loaded([1, 2, 3, 4, 5, 6])
 let value: [Int]? = state.elementLoaded
 ```
 
