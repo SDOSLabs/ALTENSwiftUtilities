@@ -94,6 +94,19 @@ let value: [Int]? = state.elementLoaded
 
 ``` swift
 let state: ModelDataState<Int, Error> = .error(URLError(.badURL))
+
+[...]
+
+switch state {
+  case .idle:
+      //Hacer algo cuando el estado es `.idle`
+  case .loading:
+      //Hacer algo cuando el estado es `.loading`
+  case .loaded(let number):
+      //Hacer algo cuando el estado es `.loaded(T)`
+  case .error(let error):
+  //Hacer algo cuando el estado es `.error(E)`
+}
 ```
 
 También añade una extensión de Combine donde permite suscribirnos a la vez que transforma los datos al tipo `ModelDataState`
@@ -102,7 +115,7 @@ También añade una extensión de Combine donde permite suscribirnos a la vez qu
 var bag = Set<AnyCancellable>()
 Just(1).sinkToState{ result in
     // `result` es de tipo `ModelDataState<Int, Never>`
-    // En este punto será igual a `.loaded(1)
+    // En este punto será igual a `.loaded(1)`
 }.store(in: &bag)
 ```
 
