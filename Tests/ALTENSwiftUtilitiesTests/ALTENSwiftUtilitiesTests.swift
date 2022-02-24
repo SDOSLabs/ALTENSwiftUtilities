@@ -228,30 +228,51 @@ final class ALTENSwiftUtilitiesTests: XCTestCase {
 //            let model2: ModelDataState<ObjectModelDataState, Error> = .loaded(ObjectModelDataState(id: 2))
 //            XCTAssert(model1 != model2)
 //        }
-//        do {
-//            let model1: ModelDataState<Int, Error> = .error(TestErrorModelDataStateEquatable.error1)
-//            let model2: ModelDataState<Int, Error> = .error(TestErrorModelDataStateEquatable.error1)
-//            XCTAssert(model1 != model2)
-//        }
-//        do {
-//            let model1: ModelDataState<Int, TestErrorModelDataStateEquatable> = .error(TestErrorModelDataStateEquatable.error1)
-//            let model2: ModelDataState<Int, TestErrorModelDataStateEquatable> = .error(TestErrorModelDataStateEquatable.error1)
-//            XCTAssert(model1 == model2)
-//        }
-//        do {
-//            let model1: ModelDataState<Int, TestErrorModelDataStateEquatable> = .error(TestErrorModelDataStateEquatable.error1)
-//            let model2: ModelDataState<Int, TestErrorModelDataStateEquatable> = .error(TestErrorModelDataStateEquatable.error2)
-//            XCTAssert(model1 != model2)
-//        }
-//        do {
-//            let model1: ModelDataState<Int, TestErrorModelDataState> = .error(TestErrorModelDataState.error1)
-//            let model2: ModelDataState<Int, TestErrorModelDataState> = .error(TestErrorModelDataState.error1)
-//            XCTAssert(model1 != model2)
-//        }
-//        do {
-//            let model1: ModelDataState<Int, TestErrorModelDataState> = .error(TestErrorModelDataState.error1)
-//            let model2: ModelDataState<Int, TestErrorModelDataState> = .error(TestErrorModelDataState.error2)
-//            XCTAssert(model1 != model2)
-//        }
+        do {
+            let model1: ModelDataState<Int, Error> = .error(TestErrorModelDataStateEquatable.error1)
+            let model2: ModelDataState<Int, Error> = .error(TestErrorModelDataStateEquatable.error1)
+            XCTAssert(model1 != model2)
+        }
+        do {
+            let model1: ModelDataState<Int, TestErrorModelDataStateEquatable> = .error(TestErrorModelDataStateEquatable.error1)
+            let model2: ModelDataState<Int, TestErrorModelDataStateEquatable> = .error(TestErrorModelDataStateEquatable.error1)
+            XCTAssert(model1 == model2)
+        }
+        do {
+            let model1: ModelDataState<Int, TestErrorModelDataStateEquatable> = .error(TestErrorModelDataStateEquatable.error1)
+            let model2: ModelDataState<Int, TestErrorModelDataStateEquatable> = .error(TestErrorModelDataStateEquatable.error2)
+            XCTAssert(model1 != model2)
+        }
+        do {
+            let model1: ModelDataState<Int, TestErrorModelDataState> = .error(TestErrorModelDataState.error1)
+            let model2: ModelDataState<Int, TestErrorModelDataState> = .error(TestErrorModelDataState.error1)
+            XCTAssert(model1 != model2)
+        }
+        do {
+            let model1: ModelDataState<Int, TestErrorModelDataState> = .error(TestErrorModelDataState.error1)
+            let model2: ModelDataState<Int, TestErrorModelDataState> = .error(TestErrorModelDataState.error2)
+            XCTAssert(model1 != model2)
+        }
+        
+        do {
+            let model1: ModelDataState<ObjectModelDataState, TestErrorModelDataStateEquatable> = .error(TestErrorModelDataStateEquatable.error1)
+            let model2: ModelDataState<ObjectModelDataState, TestErrorModelDataStateEquatable> = .error(TestErrorModelDataStateEquatable.error1)
+            XCTAssert(model1 == model2)
+        }
+        do {
+            let model1: ModelDataState<ObjectModelDataState, TestErrorModelDataStateEquatable> = .error(TestErrorModelDataStateEquatable.error1)
+            let model2: ModelDataState<ObjectModelDataState, TestErrorModelDataStateEquatable> = .error(TestErrorModelDataStateEquatable.error2)
+            XCTAssert(model1 != model2)
+        }
+        do {
+            let model1: ModelDataState<ObjectModelDataState, TestErrorModelDataState> = .error(TestErrorModelDataState.error1)
+            let model2: ModelDataState<ObjectModelDataState, TestErrorModelDataState> = .error(TestErrorModelDataState.error1)
+            XCTAssert(model1 != model2)
+        }
+        do {
+            let model1: ModelDataState<ObjectModelDataState, TestErrorModelDataState> = .error(TestErrorModelDataState.error1)
+            let model2: ModelDataState<ObjectModelDataState, TestErrorModelDataState> = .error(TestErrorModelDataState.error2)
+            XCTAssert(model1 != model2)
+        }
     }
 }

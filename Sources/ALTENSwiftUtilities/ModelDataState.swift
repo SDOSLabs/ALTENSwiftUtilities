@@ -58,8 +58,6 @@ extension ModelDataState where T: Equatable {
         case (.loaded(let left), .loaded(let right)):
             if left == right {
                 return true
-            } else if left != right {
-                return false
             } else {
                 return false
             }
