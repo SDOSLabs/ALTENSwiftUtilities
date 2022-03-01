@@ -1,13 +1,13 @@
 //
 //  CancelBag.swift
 //
-//  Copyright © 2021 SDOS. All rights reserved.
+//  Copyright © 2022 ALTEN. All rights reserved.
 //
 
 import Combine
 
 
-/// Almacen que permite retener la suscripción de diferentes suscriptores de Combine
+/// Almacén que permite retener la suscripción de diferentes suscriptores de Combine
 public final class CancelBag {
     public fileprivate(set) var subscriptions = Set<AnyCancellable>()
     
