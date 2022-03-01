@@ -1,7 +1,7 @@
 //
 //  ModelDataState.swift
 //
-//  Copyright © 2021 SDOS. All rights reserved.
+//  Copyright © 2022 ALTEN. All rights reserved.
 //
 
 import Foundation
